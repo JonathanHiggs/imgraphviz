@@ -1,0 +1,8 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+find_dependency(imgui)
+find_dependency(Graphviz)
+
+include(${CMAKE_CURRENT_LIST_DIR}/imgraphviz-targets.cmake)
