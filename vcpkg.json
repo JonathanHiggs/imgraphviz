@@ -2,17 +2,25 @@
   "name": "imgraphviz",
   "version": "0.0.1",
   "dependencies": [
-    "fmt",
-    "glfw3",
     "graphviz",
-    "opengl",
-    {
-      "name": "glad",
-      "features": [ "loader" ]
-    },
-    {
-      "name": "imgui",
-      "features": [ "docking-experimental", "glfw-binding", "opengl3-binding" ]
+    "imgui"
+  ],
+  "features": {
+    "example": {
+      "description": "Packages required to build example app",
+      "dependencies": [
+        "fmt",
+        "glfw3",
+        "opengl",
+        {
+          "name": "glad",
+          "features": [ "loader" ]
+        },
+        {
+          "name": "imgui",
+          "features": [ "docking-experimental", "glfw-binding", "opengl3-binding" ]
+        }
+      ]
     }
-  ]
+  }
 }

@@ -40,5 +40,42 @@
       "inherits": [ "base" ],
       "cacheVariables": { "CMAKE_BUILD_TYPE": "Release" }
     }
+  ],
+  "buildPresets": [
+    {
+      "name": "msvc-debug",
+      "configurePreset": "msvc-debug"
+    },
+    {
+      "name": "msvc-develop",
+      "configurePreset": "msvc-develop"
+    },
+    {
+      "name": "msvc-release",
+      "configurePreset": "msvc-release"
+    }
+  ],
+  "workflowPresets": [
+    {
+      "name": "msvc-debug",
+      "steps": [
+        { "type": "configure", "name": "msvc-debug" },
+        { "type": "build", "name": "msvc-debug" }
+      ]
+    },
+    {
+      "name": "msvc-develop",
+      "steps": [
+        { "type": "configure", "name": "msvc-develop" },
+        { "type": "build", "name": "msvc-develop" }
+      ]
+    },
+    {
+      "name": "msvc-release",
+      "steps": [
+        { "type": "configure", "name": "msvc-release" },
+        { "type": "build", "name": "msvc-release" }
+      ]
+    }
   ]
 }
