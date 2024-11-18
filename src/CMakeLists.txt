@@ -13,10 +13,26 @@ target_sources(
         BASE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}"
         FILES ${header_files})
 
+
+target_include_directories(
+    imgraphviz
+    PUBLIC
+        $<BUILD_INTERFACE:${Graphviz_INCLUDE_DIRS}>)
+
 target_link_libraries(imgraphviz
     PUBLIC
         imgui::imgui
-        Graphviz)
+        PkgConfig::Graphviz
+        ${GRAPHVIZ_GVPLUGIN_CORE_LIBRARY}
+        ${GRAPHVIZ_GVPLUGIN_DOT_LAYOUT_LIBRARY}
+        ${GRAPHVIZ_GVPLUGIN_GD_LIBRARY}
+        ${GRAPHVIZ_GVPLUGIN_GDIPLUS_LIBRARY}
+        ${GRAPHVIZ_GVPLUGIN_NEATO_LAYOUT_LIBRARY}
+        ${GRAPHVIZ_GVPLUGIN_PANGO_LIBRARY}
+        ${GRAPHVIZ_GVPLUGIN_RSVG_LIBRARY}
+        ${GRAPHVIZ_GVPLUGIN_WEBP_LIBRARY}
+)
+
 
 include(CMakePackageConfigHelpers)
 

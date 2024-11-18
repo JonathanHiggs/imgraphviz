@@ -34,7 +34,20 @@ include(GNUInstallDirs)
 # Dependencies
 
 find_package(imgui          CONFIG REQUIRED)
-find_package(Graphviz              REQUIRED)
+
+find_package(PkgConfig)
+
+pkg_check_modules(Graphviz REQUIRED IMPORTED_TARGET libgvc)
+
+find_library(GRAPHVIZ_GVPLUGIN_CORE_LIBRARY gvplugin_core)
+find_library(GRAPHVIZ_GVPLUGIN_DOT_LAYOUT_LIBRARY gvplugin_dot_layout)
+find_library(GRAPHVIZ_GVPLUGIN_GD_LIBRARY gvplugin_gd)
+find_library(GRAPHVIZ_GVPLUGIN_GDIPLUS_LIBRARY gvplugin_gdiplus)
+find_library(GRAPHVIZ_GVPLUGIN_NEATO_LAYOUT_LIBRARY gvplugin_neato_layout)
+find_library(GRAPHVIZ_GVPLUGIN_PANGO_LIBRARY gvplugin_pango)
+find_library(GRAPHVIZ_GVPLUGIN_RSVG_LIBRARY gvplugin_rsvg)
+find_library(GRAPHVIZ_GVPLUGIN_WEBP_LIBRARY gvplugin_webp)
+
 
 if(IMGRAPHVIZ_BUILD_EXAMPLE)
     add_definitions(-DGLFW_INCLUDE_NONE)
