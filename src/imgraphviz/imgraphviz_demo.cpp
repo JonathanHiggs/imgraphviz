@@ -1,7 +1,7 @@
-#include "imgraphviz/imgraphviz_demo.h"
+#include "imgraphviz/imgraphviz_demo.hpp"
 
-#include "imgraphviz/imgraphviz.h"
-#include "imgraphviz/imgraphviz_internal.h"
+#include "imgraphviz/imgraphviz.hpp"
+#include "imgraphviz/imgraphviz_internal.hpp"
 
 
 namespace ImGraphviz

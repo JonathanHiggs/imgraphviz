@@ -1,6 +1,6 @@
 #pragma once
 
-#include "imgraphviz/imgraphviz.h"
+#include "imgraphviz/imgraphviz.hpp"
 
 extern "C"
 {
@@ -15,7 +15,7 @@ extern "C"
 namespace ImGraphviz
 {
 
-#define IMGRAPHVIZ_CREATE_LABEL_ALLOCA(_name, _label)                                                             \
+#define IMGRAPHVIZ_CREATE_LABEL_ALLOCA(_name, _label)                                                                  \
     char * _name;                                                                                                      \
     do                                                                                                                 \
     {                                                                                                                  \

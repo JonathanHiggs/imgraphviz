@@ -1,6 +1,6 @@
-#include "imgraphviz/imgraphviz_internal.h"
+#include "imgraphviz/imgraphviz_internal.hpp"
 
-#include "imgraphviz/imgraphviz.h"
+#include "imgraphviz/imgraphviz.hpp"
 #include "imgui_internal.h"
 
 #include <stddef.h>

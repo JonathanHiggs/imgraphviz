@@ -2,7 +2,7 @@ add_library(imgraphviz STATIC)
 add_library(imgraphviz::imgraphviz ALIAS imgraphviz)
 
 file(GLOB_RECURSE source_files CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
-file(GLOB_RECURSE header_files CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/*.h")
+file(GLOB_RECURSE header_files CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/*.hpp")
 
 target_sources(
     imgraphviz

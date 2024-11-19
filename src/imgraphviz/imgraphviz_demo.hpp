@@ -1,6 +1,6 @@
 #pragma once
 
-#include <imgraphviz/imgraphviz.h>
+#include <imgraphviz/imgraphviz.hpp>
 
 
 namespace ImGraphviz

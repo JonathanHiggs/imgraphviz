@@ -1,4 +1,4 @@
-#include <imgraphviz/imgraphviz_demo.h>
+#include <imgraphviz/imgraphviz_demo.hpp>
 
 #include <fmt/ostream.h>
 #include <glad/glad.h>
