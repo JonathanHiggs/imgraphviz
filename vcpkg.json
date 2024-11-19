@@ -3,7 +3,11 @@
   "version": "0.0.3",
   "dependencies": [
     "graphviz",
-    "imgui"
+    "imgui",
+    {
+      "name": "pkgconf",
+      "host": true
+    }
   ],
   "features": {
     "example": {
